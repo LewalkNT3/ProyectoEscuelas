@@ -71,11 +71,14 @@ export function AlumnosFormPage() {
         ></input>
         {errors.Fullname && <span>Este campo es requerido</span>}
 
-        <input
+        <select
           type="text"
-          placeholder="Escuela"
+          placeholder="Seleccione una Escuela"
           {...register("Escuela", { required: true })}
-        ></input>
+        >
+          <option>ES N°37</option>
+          <option>ES N°46</option>
+        </select>
         {errors.Escuela && <span>Este campo es requerido</span>}
 
         <input
@@ -105,11 +108,30 @@ export function AlumnosFormPage() {
         ></input>
         {errors.telefono && <span>El numero Enviado no es valido</span>}
 
-        <input
+        <select
           type="text"
           placeholder="Curso"
           {...register("Curso", { required: true })}
-        ></input>
+        >
+          <option>1ro 1ra</option>
+          <option>1ro 2da</option>
+          <option>1ro 3ra</option>
+          <option>1ro 4ta</option>
+          <option>2do 1ra</option>
+          <option>2do 2da</option>
+          <option>2do 3ra</option>
+          <option>2do 4ta</option>
+          <option>3ro 1ra</option>
+          <option>3ro 2da</option>
+          <option>3ro 3ra</option>
+          <option>3to 4ta</option>
+          <option>4to ArLi</option>
+          <option>4to Com</option>
+          <option>5to ArLi</option>
+          <option>5to Com</option>
+          <option>6to ArLi</option>
+          <option>6to Com</option>
+        </select>
         {errors.Curso && <span>Este campo es requerido</span>}
 
         <input

@@ -5,7 +5,7 @@ export default function AlumnosCardRO({ alumno }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/alumnos/alumno/${alumno.id}`);
+    navigate(`/lista-de-alumnos/alumno/${alumno.id}`);
   };
 
   return (
@@ -13,6 +13,7 @@ export default function AlumnosCardRO({ alumno }) {
       <h1>{alumno.Fullname}</h1>
       <p>{alumno.Escuela}</p>
       <p>{alumno.Curso}</p>
+      <p>{alumno.Turno}</p>
       <hr />
     </div>
   );

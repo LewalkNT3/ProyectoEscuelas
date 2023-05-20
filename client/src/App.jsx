@@ -19,7 +19,10 @@ function App() {
           <Route path="/registrar-alumno" element={<AlumnosFormPage />} />
           <Route path="/alumno/:id" element={<AlumnosFormPage />} />
           <Route path="/lista-de-alumnos" element={<ListaDeAlumnosRO />} />
-          <Route path="/alumnos/alumno/:id" element={<InfoCompletaAlumno />} />
+          <Route
+            path="/lista-de-alumnos/alumno/:id"
+            element={<InfoCompletaAlumno />}
+          />
         </Routes>
         <Toaster />
       </BrowserRouter>
