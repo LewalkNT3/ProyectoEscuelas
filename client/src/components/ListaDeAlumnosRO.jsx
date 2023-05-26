@@ -46,7 +46,7 @@ export function ListaDeAlumnosRO() {
 
     const delayLoadAlumnos = () => {
       clearTimeout(timerId);
-      timerId = setTimeout(loadAlumnos, 300);
+      timerId = setTimeout(loadAlumnos, 0);
     };
 
     delayLoadAlumnos();
@@ -57,9 +57,6 @@ export function ListaDeAlumnosRO() {
   }, [filtro, filtroCurso, filtroEscuela, filtroTurno]);
 
   return (
-    // TODO: modificar los cursos para que sue puedan filtrar por cursos correctamente y anadir la cantidad de cursos que sean nescesario en el <Select> :)
-    // TODO: modificar los cursos para que sue puedan filtrar por cursos correctamente y anadir la cantidad de cursos que sean nescesario en el <Select> :)
-
     <div>
       <select value={filtroCurso} onChange={handleFiltroCursoChange}>
         <option value="">Todos los cursos</option>
@@ -88,9 +85,6 @@ export function ListaDeAlumnosRO() {
         <option value="6to ArLi">6to ArLi</option>
         <option value="6to Com">6to Com</option>
       </select>
-
-      {/* TODO: modificar las escuelas en la database por elecciones para que pueda ser filtrada  */}
-      {/* TODO: modificar las escuelas en la database por elecciones para que pueda ser filtrada  */}
 
       <select value={filtroEscuela} onChange={handleFiltroEscuelaChange}>
         <option value="">Todas las escuelas</option>
