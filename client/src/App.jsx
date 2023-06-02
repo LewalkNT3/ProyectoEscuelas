@@ -30,12 +30,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Layout /> */}
         <Routes>
           <Route path="/" element={<PreLoginPage />} />
           <Route path="/login" element={<LoginForm />} />
           <Route
-            path="/alumno/:id"
+            path="/administrador-alumnos/alumno/:id"
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (

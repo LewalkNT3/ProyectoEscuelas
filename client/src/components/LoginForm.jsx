@@ -60,7 +60,7 @@ const LoginForm = () => {
         </form>
         <div className="need-help">
           <p>
-            Necesitas ayuda?{" "}
+            Necesitas ayuda?
             <Link
               className="transition duration-300 ease bg-transparent hover:text-custom-green"
               to="/ayuda"

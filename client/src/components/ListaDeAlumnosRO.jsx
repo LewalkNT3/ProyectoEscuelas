@@ -21,6 +21,7 @@ export function ListaDeAlumnosRO() {
 
   const handleFiltroEscuelaChange = (event) => {
     const valorFiltroEscuela = event.target.value.toLowerCase();
+    console.log(valorFiltroEscuela);
     setFiltroEscuela(valorFiltroEscuela);
   };
 
@@ -57,60 +58,69 @@ export function ListaDeAlumnosRO() {
   }, [filtro, filtroCurso, filtroEscuela, filtroTurno]);
 
   return (
-    <div>
-      <select value={filtroCurso} onChange={handleFiltroCursoChange}>
-        <option value="">Todos los cursos</option>
-        <option value="1ro 1ra">1ro 1ra</option>
-        <option value="1ro 2da">1ro 2da</option>
-        <option value="1ro 3ra">1ro 3ra</option>
-        <option value="1ro 4ta">1ro 4ta</option>
-        <option value="2do 1ra">2do 1ra</option>
-        <option value="2do 2da">2do 2da</option>
-        <option value="2do 3ra">2do 3ra</option>
-        <option value="2do 4ta">2do 4ta</option>
-        <option value="3ro 1ra">3ro 1ra</option>
-        <option value="3ro 2da">3ro 2da</option>
-        <option value="3ro 3ra">3ro 2da</option>
-        <option value="3to 4ta">3ro 2da</option>
-        <option value="4to 1ra">4to 1ra</option>
-        <option value="4to 2da">4to 2da</option>
-        <option value="4to ArLi">4to ArLi</option>
-        <option value="4to Com">4to Com</option>
-        <option value="5to 1ra">5to 1ra</option>
-        <option value="5to 2da">5to 2da</option>
-        <option value="5to ArLi">5to ArLi</option>
-        <option value="5to Com">5to Com</option>
-        <option value="6to 1ra">6to 1ra</option>
-        <option value="6to 1ra">6to 2da</option>
-        <option value="6to ArLi">6to ArLi</option>
-        <option value="6to Com">6to Com</option>
-      </select>
+    <div className="flex justify-center items-center">
+      <div className="flex flex-col items-center max-h-[90%] max-w-[65%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
+        <input
+          className="w-[65%] p-3 border border-black mb-5 rounded-full"
+          type="text"
+          value={filtro}
+          onChange={handleFiltroChange}
+          placeholder="Filtrar alumnos"
+        />
 
-      <select value={filtroEscuela} onChange={handleFiltroEscuelaChange}>
-        <option value="">Todas las escuelas</option>
-        <option value="ES N°37">ES N°37</option>
-        <option value="ES N°46">ES N°46</option>
-      </select>
-
-      <select value={filtroTurno} onChange={handleFiltroTurnoChange}>
-        <option value="">Todos los turnos</option>
-        <option value="Tm">Mañana</option>
-        <option value="Tt">Tarde</option>
-        <option value="Tn">Noche</option>
-      </select>
-
-      <input
-        type="text"
-        value={filtro}
-        onChange={handleFiltroChange}
-        placeholder="Filtrar alumnos"
-      />
-
-      {alumnos.map((alumno) => (
-        <div key={alumno.id}>
-          <AlumnosCardRO alumno={alumno} />
+        <div className="flex flex-row gap-5">
+          <div className="border border-black p-3 rounded-xl">
+            <select value={filtroCurso} onChange={handleFiltroCursoChange}>
+              <option value="">Todos los cursos</option>
+              <option value="1ro 1ra">1ro 1ra</option>
+              <option value="1ro 2da">1ro 2da</option>
+              <option value="1ro 3ra">1ro 3ra</option>
+              <option value="1ro 4ta">1ro 4ta</option>
+              <option value="2do 1ra">2do 1ra</option>
+              <option value="2do 2da">2do 2da</option>
+              <option value="2do 3ra">2do 3ra</option>
+              <option value="2do 4ta">2do 4ta</option>
+              <option value="3ro 1ra">3ro 1ra</option>
+              <option value="3ro 2da">3ro 2da</option>
+              <option value="3ro 3ra">3ro 2da</option>
+              <option value="3to 4ta">3ro 2da</option>
+              <option value="4to 1ra">4to 1ra</option>
+              <option value="4to 2da">4to 2da</option>
+              <option value="4to ArLi">4to ArLi</option>
+              <option value="4to Com">4to Com</option>
+              <option value="5to 1ra">5to 1ra</option>
+              <option value="5to 2da">5to 2da</option>
+              <option value="5to ArLi">5to ArLi</option>
+              <option value="5to Com">5to Com</option>
+              <option value="6to 1ra">6to 1ra</option>
+              <option value="6to 1ra">6to 2da</option>
+              <option value="6to ArLi">6to ArLi</option>
+              <option value="6to Com">6to Com</option>
+            </select>
+          </div>
+          <div className="border border-black p-3 rounded-xl">
+            <select value={filtroEscuela} onChange={handleFiltroEscuelaChange}>
+              <option value="">Todos las escuelas</option>
+              <option value="ES N°37">ES N°37</option>
+              <option value="ES N°46">ES N°46</option>
+            </select>
+          </div>
+          <div className="border border-black p-3 rounded-xl">
+            <select value={filtroTurno} onChange={handleFiltroTurnoChange}>
+              <option value="">Todos los turnos</option>
+              <option value="Tm">Mañana</option>
+              <option value="Tt">Tarde</option>
+              <option value="Tn">Noche</option>
+            </select>
+          </div>
         </div>
-      ))}
+
+        {alumnos.map((alumno) => (
+          <div className="min-w-full" key={alumno.id}>
+            <AlumnosCardRO alumno={alumno} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

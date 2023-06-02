@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 function PreLoginPage() {
   return (
-    <div className="flex justify-center items-center max-h-screen box-decoration">
+    <div className="flex justify-center items-center max-h-screen">
       <div className="flex flex-row-reverse items-center max-h-[90%] max-w-[90%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
         <div className="flex-0 flex-grow-0 flex-shrink-0 flex-basis-1/2 ml-4">
           <img
-            className="w-[570px]  h-[500px]"
+            className="w-800 h-auto object-cover aspect-video"
             src="/bannerprelogin-removebg-preview (1).png"
           />
         </div>

@@ -22,14 +22,13 @@ export function AlumnosFormPage() {
 
   const onSubmit = handleSubmit(async (data) => {
     if (params.id) {
-      console.log(data);
       await updateAlumnos(params.id, data);
       toast.success("Alumno Actualizado");
     } else {
       await createAlumno(data);
       toast.success("Alumno Creado");
     }
-    navigate("/");
+    navigate("/homepage");
   });
 
   useEffect(() => {
@@ -64,46 +63,46 @@ export function AlumnosFormPage() {
 
   return (
     <div className="min-h-screen mt-3 pt-3 mb-3 flex justify-center items-center flex-col">
-      <div className="w-[1000px] h-[1200px] p-280 p-5 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col">
+      <div className="p-28 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col">
         <div className="titulo-container">
-          <h1 className="text-2xl">Registra los alumnos</h1>
+          <h1 className="text-5xl mb-10">Registra los alumnos</h1>
         </div>
         <hr />
-        <form className="w-96" onSubmit={onSubmit}>
+        <form className="w-96 justify-center items-center" onSubmit={onSubmit}>
           <div className="mt-3">
+            {errors.Fullname && <span>Este campo es requerido*</span>}
             <input
               className="w-full mb-5 p-2 outline-none"
               type="text"
               placeholder="Nombre Completo"
               {...register("Fullname", { required: true })}
             ></input>
-            {errors.Fullname && <span>Este campo es requerido</span>}
           </div>
           <div className="grid grid-cols-2 gap-5">
+            {errors.DNI && <span className=" ">Este campo es requerido*</span>}
             <input
               className="w-full mb-5 p-2 outline-none"
               type="number"
               placeholder="DNI"
               {...register("DNI", { required: true })}
             ></input>
-            {errors.DNI && <span>Este campo es requerido</span>}
 
+            {errors.Legajo && <span>Este campo es requerido*</span>}
             <input
               className="w-full mb-5 p-2 outline-none"
               type="number"
               placeholder="Legajo"
               {...register("Legajo", { required: true })}
             ></input>
-            {errors.Legajo && <span>Este campo es requerido</span>}
           </div>
           <div className="">
+            {errors.telefono && <span>El numero Enviado no es valido*</span>}
             <input
               className="w-full mb-5 p-2 outline-none"
               type="tel"
               placeholder="Telefono"
               {...register("telefono", { required: true })}
             ></input>
-            {errors.telefono && <span>El numero Enviado no es valido</span>}
           </div>
           <div className="grid grid-cols-2 gap-5">
             <select
@@ -115,7 +114,7 @@ export function AlumnosFormPage() {
               <option>ES N°37</option>
               <option>ES N°46</option>
             </select>
-            {errors.Escuela && <span>Este campo es requerido</span>}
+            {errors.Escuela && <span>Este campo es requerido*</span>}
             <input
               className="w-full mb-5 p-2 outline-none"
               type="date"
@@ -160,7 +159,6 @@ export function AlumnosFormPage() {
               <option>Tt</option>
               <option>Tn</option>
             </select>
-            {errors.Turno && <span>Este campo es requerido</span>}
           </div>
 
           <div className="flex gap-4">
@@ -243,16 +241,14 @@ export function AlumnosFormPage() {
               placeholder="Conducta"
               {...register("Conducta", { required: false })}
             ></input>
-            {errors.Conducta && <span>Este campo es requerido</span>}
             <textarea
               placeholder="ConductaTexto"
               {...register("ConductaTexto", { required: false })}
               className="w-full mb-5 p-5 outline-none"
             ></textarea>
-            {errors.ConductaTexto && <span>Este campo es requerido</span>}
           </div>
           <button className="flex justify-center items-center w-full h-[40px] mb-3 border border-1 border-black transition duration-200 ease bg-transparent hover:bg-custom-green">
-            Save
+            Guardar
           </button>
         </form>
         {params.id && (
