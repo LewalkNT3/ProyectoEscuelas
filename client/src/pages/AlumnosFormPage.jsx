@@ -8,6 +8,7 @@ import {
 } from "../api/alumnos.api";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import "../styles/AlumnosFormPage.css";
 
 export function AlumnosFormPage() {
   const {
@@ -62,182 +63,213 @@ export function AlumnosFormPage() {
   }, []);
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="Nombre Completo"
-          {...register("Fullname", { required: true })}
-        ></input>
-        {errors.Fullname && <span>Este campo es requerido</span>}
+    <div className="min-h-screen mt-3 pt-3 mb-3 flex justify-center items-center flex-col">
+      <div className="w-[1000px] h-[1200px] p-280 p-5 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col">
+        <div className="titulo-container">
+          <h1 className="text-2xl">Registra los alumnos</h1>
+        </div>
+        <hr />
+        <form className="w-96" onSubmit={onSubmit}>
+          <div className="mt-3">
+            <input
+              className="w-full mb-5 p-2 outline-none"
+              type="text"
+              placeholder="Nombre Completo"
+              {...register("Fullname", { required: true })}
+            ></input>
+            {errors.Fullname && <span>Este campo es requerido</span>}
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <input
+              className="w-full mb-5 p-2 outline-none"
+              type="number"
+              placeholder="DNI"
+              {...register("DNI", { required: true })}
+            ></input>
+            {errors.DNI && <span>Este campo es requerido</span>}
 
-        <select
-          type="text"
-          placeholder="Seleccione una Escuela"
-          {...register("Escuela", { required: true })}
-        >
-          <option>ES N°37</option>
-          <option>ES N°46</option>
-        </select>
-        {errors.Escuela && <span>Este campo es requerido</span>}
+            <input
+              className="w-full mb-5 p-2 outline-none"
+              type="number"
+              placeholder="Legajo"
+              {...register("Legajo", { required: true })}
+            ></input>
+            {errors.Legajo && <span>Este campo es requerido</span>}
+          </div>
+          <div className="">
+            <input
+              className="w-full mb-5 p-2 outline-none"
+              type="tel"
+              placeholder="Telefono"
+              {...register("telefono", { required: true })}
+            ></input>
+            {errors.telefono && <span>El numero Enviado no es valido</span>}
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <select
+              className="w-full mb-5 p-2 outline-none"
+              type="text"
+              placeholder="Seleccione una Escuela"
+              {...register("Escuela", { required: true })}
+            >
+              <option>ES N°37</option>
+              <option>ES N°46</option>
+            </select>
+            {errors.Escuela && <span>Este campo es requerido</span>}
+            <input
+              className="w-full mb-5 p-2 outline-none"
+              type="date"
+              {...register("FechaDeNacimiento", { required: true })}
+            ></input>
+            {errors.FechaDeNacimiento && <span>Este campo es requerido</span>}
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <select
+              className="w-full mb-5 p-2 outline-none"
+              type="text"
+              placeholder="Curso"
+              {...register("Curso", { required: true })}
+            >
+              <option>1ro 1ra</option>
+              <option>1ro 2da</option>
+              <option>1ro 3ra</option>
+              <option>1ro 4ta</option>
+              <option>2do 1ra</option>
+              <option>2do 2da</option>
+              <option>2do 3ra</option>
+              <option>2do 4ta</option>
+              <option>3ro 1ra</option>
+              <option>3ro 2da</option>
+              <option>3ro 3ra</option>
+              <option>3to 4ta</option>
+              <option>4to ArLi</option>
+              <option>4to Com</option>
+              <option>5to ArLi</option>
+              <option>5to Com</option>
+              <option>6to ArLi</option>
+              <option>6to Com</option>
+            </select>
+            {errors.Curso && <span>Este campo es requerido</span>}
 
-        <input
-          type="date"
-          {...register("FechaDeNacimiento", { required: true })}
-        ></input>
-        {errors.FechaDeNacimiento && <span>Este campo es requerido</span>}
+            <select
+              className="w-full mb-5 p-2 outline-none"
+              placeholder="Selecciona el turno"
+              {...register("Turno", { required: false })}
+            >
+              <option>Tm</option>
+              <option>Tt</option>
+              <option>Tn</option>
+            </select>
+            {errors.Turno && <span>Este campo es requerido</span>}
+          </div>
 
-        <input
-          type="number"
-          placeholder="DNI"
-          {...register("DNI", { required: true })}
-        ></input>
-        {errors.DNI && <span>Este campo es requerido</span>}
+          <div className="flex gap-4">
+            <input
+              className=""
+              type="checkbox"
+              placeholder="ServicioLocal"
+              {...register("ServicioLocal", { required: false })}
+            ></input>
+            {errors.ServicioLocal && <span>Este campo es requerido</span>}
+            <textarea
+              className="w-full mb-5 p-5 outline-none"
+              placeholder="ServicioLocalTexto"
+              {...register("ServicioLocalTexto", { required: false })}
+            ></textarea>
+            {errors.ServicioLocalTexto && <span>Este campo es requerido</span>}
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="checkbox"
+              placeholder="Ausentismo"
+              {...register("Ausentismo", { required: false })}
+            ></input>
+            {errors.Ausentismo && <span>Este campo es requerido</span>}
+            <textarea
+              className="w-full mb-5 p-5 outline-none"
+              placeholder="AusentismoTexto"
+              {...register("AusentismoTexto", { required: false })}
+            ></textarea>
+            {errors.AusentismoTexto && <span>Este campo es requerido</span>}
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="checkbox"
+              placeholder="DEI"
+              {...register("DEI", { required: false })}
+            ></input>
+            {errors.DEI && <span>Este campo es requerido</span>}
 
-        <input
-          type="number"
-          placeholder="Legajo"
-          {...register("Legajo", { required: true })}
-        ></input>
-        {errors.Legajo && <span>Este campo es requerido</span>}
+            <textarea
+              placeholder="DEITexto"
+              className="w-full mb-5 p-5 outline-none"
+              {...register("DEITexto", { required: false })}
+            ></textarea>
+            {errors.DEITexto && <span>Este campo es requerido</span>}
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="checkbox"
+              placeholder="Inclusion"
+              {...register("Inclusion", { required: false })}
+            ></input>
+            {errors.Inclusion && <span>Este campo es requerido</span>}
 
-        <input
-          type="tel"
-          placeholder="Telefono"
-          {...register("telefono", { required: true })}
-        ></input>
-        {errors.telefono && <span>El numero Enviado no es valido</span>}
+            <textarea
+              className="w-full mb-5 p-5 outline-none"
+              placeholder="InclusionTexto"
+              {...register("InclusionTexto", { required: false })}
+            ></textarea>
+            {errors.InclusionTexto && <span>Este campo es requerido</span>}
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="checkbox"
+              placeholder="Judicial"
+              {...register("Judicial", { required: false })}
+            ></input>
+            {errors.Judicial && <span>Este campo es requerido</span>}
 
-        <select
-          type="text"
-          placeholder="Curso"
-          {...register("Curso", { required: true })}
-        >
-          <option>1ro 1ra</option>
-          <option>1ro 2da</option>
-          <option>1ro 3ra</option>
-          <option>1ro 4ta</option>
-          <option>2do 1ra</option>
-          <option>2do 2da</option>
-          <option>2do 3ra</option>
-          <option>2do 4ta</option>
-          <option>3ro 1ra</option>
-          <option>3ro 2da</option>
-          <option>3ro 3ra</option>
-          <option>3to 4ta</option>
-          <option>4to ArLi</option>
-          <option>4to Com</option>
-          <option>5to ArLi</option>
-          <option>5to Com</option>
-          <option>6to ArLi</option>
-          <option>6to Com</option>
-        </select>
-        {errors.Curso && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="ServicioLocal"
-          {...register("ServicioLocal", { required: false })}
-        ></input>
-        {errors.ServicioLocal && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="ServicioLocalTexto"
-          {...register("ServicioLocalTexto", { required: false })}
-        ></textarea>
-        {errors.ServicioLocalTexto && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="Ausentismo"
-          {...register("Ausentismo", { required: false })}
-        ></input>
-        {errors.Ausentismo && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="AusentismoTexto"
-          {...register("AusentismoTexto", { required: false })}
-        ></textarea>
-        {errors.AusentismoTexto && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="DEI"
-          {...register("DEI", { required: false })}
-        ></input>
-        {errors.DEI && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="DEITexto"
-          {...register("DEITexto", { required: false })}
-        ></textarea>
-        {errors.DEITexto && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="Inclusion"
-          {...register("Inclusion", { required: false })}
-        ></input>
-        {errors.Inclusion && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="InclusionTexto"
-          {...register("InclusionTexto", { required: false })}
-        ></textarea>
-        {errors.InclusionTexto && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="Judicial"
-          {...register("Judicial", { required: false })}
-        ></input>
-        {errors.Judicial && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="JudicialTexto"
-          {...register("JudicialTexto", { required: false })}
-        ></textarea>
-        {errors.JudicialTexto && <span>Este campo es requerido</span>}
-
-        <input
-          type="checkbox"
-          placeholder="Conducta"
-          {...register("Conducta", { required: false })}
-        ></input>
-        {errors.Conducta && <span>Este campo es requerido</span>}
-
-        <textarea
-          placeholder="ConductaTexto"
-          {...register("ConductaTexto", { required: false })}
-        ></textarea>
-        {errors.ConductaTexto && <span>Este campo es requerido</span>}
-
-        <select
-          placeholder="Selecciona el turno"
-          {...register("Turno", { required: false })}
-        >
-          <option>Tm</option>
-          <option>Tt</option>
-          <option>Tn</option>
-        </select>
-        {errors.Turno && <span>Este campo es requerido</span>}
-
-        <button>Save</button>
-      </form>
-
-      {params.id && (
-        <button
-          onClick={async () => {
-            const accepted = window.confirm("Estas seguro?");
-            if (accepted) {
-              await deleteAlumnos(params.id);
-              navigate("/");
-            }
-          }}
-        >
-          Delete
-        </button>
-      )}
+            <textarea
+              className="w-full mb-5 p-5 outline-none"
+              placeholder="JudicialTexto"
+              {...register("JudicialTexto", { required: false })}
+            ></textarea>
+            {errors.JudicialTexto && <span>Este campo es requerido</span>}
+          </div>
+          <div className="flex gap-4">
+            <input
+              type="checkbox"
+              placeholder="Conducta"
+              {...register("Conducta", { required: false })}
+            ></input>
+            {errors.Conducta && <span>Este campo es requerido</span>}
+            <textarea
+              placeholder="ConductaTexto"
+              {...register("ConductaTexto", { required: false })}
+              className="w-full mb-5 p-5 outline-none"
+            ></textarea>
+            {errors.ConductaTexto && <span>Este campo es requerido</span>}
+          </div>
+          <button className="flex justify-center items-center w-full h-[40px] mb-3 border border-1 border-black transition duration-200 ease bg-transparent hover:bg-custom-green">
+            Save
+          </button>
+        </form>
+        {params.id && (
+          <button
+            className="flex justify-center items-center w-[100px] p-2 mb-3 border border-1 border-black transition duration-200 ease bg-red-600 hover:bg-red-700"
+            onClick={async () => {
+              const accepted = window.confirm("Estas seguro?");
+              if (accepted) {
+                await deleteAlumnos(params.id);
+                navigate("/");
+              }
+            }}
+          >
+            Delete
+          </button>
+        )}
+      </div>
     </div>
   );
 }

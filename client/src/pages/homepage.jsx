@@ -32,7 +32,6 @@ export function Homepage() {
         <div>
           <h2>Detalles del usuario:</h2>
           <p>Nombre: {userDetails.username}</p>
-          {/* Mostrar otros detalles del usuario según tu necesidad */}
           {userDetails.is_staff && (
             <div>
               <h3>Enlaces exclusivos de administrador:</h3>
@@ -40,7 +39,6 @@ export function Homepage() {
                 <li>
                   <Link to="/administrador-alumnos">Administrar alumnos</Link>
                 </li>
-                {/* Agrega otros enlaces exclusivos para administradores */}
               </ul>
             </div>
           )}
