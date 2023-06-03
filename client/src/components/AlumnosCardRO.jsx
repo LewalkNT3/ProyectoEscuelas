@@ -5,7 +5,7 @@ export default function AlumnosCardRO({ alumno }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/ListadoDeAlumnos/alumno/${alumno.id}`);
+    navigate(`/lista-de-alumnos/alumno/${alumno.id}`);
   };
 
   return (

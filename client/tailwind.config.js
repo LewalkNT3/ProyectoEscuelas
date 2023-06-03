@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "custom-green": "rgb(57, 141, 123)",
+        "custom-green": "rgb(79 127 127)",
+        "custom-ornage": "rgb(207 83 59)",
+        "custom-violet": "#9585ba",
       },
     },
   },

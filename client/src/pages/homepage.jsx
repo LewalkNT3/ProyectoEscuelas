@@ -1,49 +1,27 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export function Homepage() {
-  const [userDetails, setUserDetails] = useState(null);
-
-  useEffect(() => {
-    const fetchUserDetails = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8000/users/api/user-detail/",
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-            },
-          }
-        );
-        setUserDetails(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchUserDetails();
-  }, []);
-
   return (
-    <div className="links-container">
-      <h1>Homepage</h1>
-      {userDetails && (
-        <div>
-          <h2>Detalles del usuario:</h2>
-          <p>Nombre: {userDetails.username}</p>
-          {userDetails.is_staff && (
-            <div>
-              <h3>Enlaces exclusivos de administrador:</h3>
-              <ul>
-                <li>
-                  <Link to="/administrador-alumnos">Administrar alumnos</Link>
-                </li>
-              </ul>
-            </div>
-          )}
+    <div className="flex justify-center items-center">
+      <div className=" p-14 m-14 bg-white box-border shadow-xl">
+        <div className="flex flex-row">
+          <div className="flex flex-col gap-7">
+            <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-ornage ">
+              <Link to="/lista-de-alumnos">Lista de alumno</Link>
+            </button>
+            <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-violet">
+              <Link to="/registrar-usuarios">Registrar Usuarios</Link>
+            </button>
+            <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-green">
+              <Link to="/administrador-alumnos">Administrador de Alumnos</Link>
+            </button>
+          </div>
+          <div className="flex-0 flex-grow-0 flex-shrink-0 flex-basis-1/2 ml-4">
+            <img src="homepage.png" />
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

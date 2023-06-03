@@ -108,7 +108,7 @@ function App() {
           />
           <Route
             exact
-            path="/register"
+            path="/registrar-usuarios"
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (
