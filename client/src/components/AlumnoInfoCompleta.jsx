@@ -17,6 +17,9 @@ export function AlumnoInfoCompleta() {
 
   return (
     <div className="bg-white mx-9 my-9">
+      <div className="backbutton">
+        <BackButton />
+      </div>
       {alumno && (
         <div className="flex flex-col gap-2 p-10 border border-black">
           <div className="">

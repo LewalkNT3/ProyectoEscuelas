@@ -60,6 +60,7 @@ export function ListaDeAlumnosRO() {
   return (
     <div className="flex justify-center items-center">
       <div className="flex flex-col items-center max-h-[90%] max-w-[65%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
+        <BackButton />
         <input
           className="w-[65%] p-3 border border-black mb-5 rounded-full"
           type="text"
@@ -67,7 +68,6 @@ export function ListaDeAlumnosRO() {
           onChange={handleFiltroChange}
           placeholder="Filtrar alumnos"
         />
-
         <div className="flex flex-row gap-5">
           <div className="border border-black p-3 rounded-xl">
             <select value={filtroCurso} onChange={handleFiltroCursoChange}>
@@ -114,7 +114,6 @@ export function ListaDeAlumnosRO() {
             </select>
           </div>
         </div>
-
         {alumnos.map((alumno) => (
           <div className="min-w-full" key={alumno.id}>
             <AlumnosCardRO alumno={alumno} />

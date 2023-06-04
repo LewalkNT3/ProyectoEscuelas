@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Layout from "./layout/Layout";
 import { AlumnosPage } from "./pages/AlumnosPage";
 import { AlumnosFormPage } from "./pages/AlumnosFormPage";
 import { Toaster } from "react-hot-toast";

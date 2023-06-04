@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/loginpage.css";
+import BackButton from "./BackArrow";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -31,6 +32,7 @@ const LoginForm = () => {
   return (
     <div className="min-h-screen flex justify-center items-center flex-col">
       <div className="w-[480px] h-[500px] p-280 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col">
+        <BackButton />
         <h2 className="text-4xl pb-10">Inicia Sesion!</h2>
         <form onSubmit={handleLogin}>
           <div className="relative m-3 w-[310px] pb-3">

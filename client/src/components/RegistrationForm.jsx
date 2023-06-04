@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import "../styles/registerpage.css";
+import BackButton from "./BackArrow";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ const RegistrationForm = () => {
   return (
     <div className="min-h-screen flex justify-center items-center flex-col">
       <div className="w-[480px] h-[500px] p-280 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col ">
+        <BackButton />
         <h2 className="text-4xl pb-10">Registro de cuentas</h2>
         {error && <p>{error}</p>}
         <form onSubmit={handleSubmit}>

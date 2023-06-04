@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllAlumnos } from "../api/alumnos.api";
 import { AlumnosCard } from "./AlumnosCard";
+import BackButton from "./BackArrow";
 
 export function AlumnosList() {
   const [alumnos, setAlumnos] = useState([]);
@@ -60,6 +61,7 @@ export function AlumnosList() {
   return (
     <div className="flex justify-center items-center">
       <div className="flex flex-col items-center max-h-[90%] max-w-[65%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
+        <BackButton />
         <input
           className="w-[65%] p-3 border border-black mb-5 rounded-full"
           type="text"

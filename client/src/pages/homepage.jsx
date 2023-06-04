@@ -10,6 +10,9 @@ export function Homepage() {
             <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-ornage ">
               <Link to="/lista-de-alumnos">Lista de alumno</Link>
             </button>
+            <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-yellow ">
+              <Link to="/registrar-alumno">Registrar Alumno</Link>
+            </button>
             <button className="border h-24 w-96 rounded-lg border-black transition-colors hover:bg-custom-violet">
               <Link to="/registrar-usuarios">Registrar Usuarios</Link>
             </button>

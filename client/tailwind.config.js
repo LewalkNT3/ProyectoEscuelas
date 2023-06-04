@@ -8,6 +8,7 @@ module.exports = {
         "custom-green": "rgb(79 127 127)",
         "custom-ornage": "rgb(207 83 59)",
         "custom-violet": "#9585ba",
+        "custom-yellow": "#f3d1a4",
       },
     },
   },

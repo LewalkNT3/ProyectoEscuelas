@@ -9,6 +9,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import "../styles/AlumnosFormPage.css";
+import BackArrow from "../components/BackArrow";
 
 export function AlumnosFormPage() {
   const {
@@ -64,6 +65,9 @@ export function AlumnosFormPage() {
   return (
     <div className="min-h-screen mt-3 pt-3 mb-3 flex justify-center items-center flex-col">
       <div className="p-28 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col">
+        <div className="backarrow">
+          <BackArrow />
+        </div>
         <div className="titulo-container">
           <h1 className="text-5xl mb-10">Registra los alumnos</h1>
         </div>
