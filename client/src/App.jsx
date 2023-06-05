@@ -12,7 +12,6 @@ import LoginForm from "./components/LoginForm";
 import PreLoginPage from "./pages/PreLoginPage";
 import "./index.css";
 import "./app.css";
-import { AlumnosList } from "./components/AlumnosList";
 
 function App() {
   const isUserLoggedIn = () => {
