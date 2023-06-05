@@ -8,7 +8,6 @@ import {
 } from "../api/alumnos.api";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import "../styles/AlumnosFormPage.css";
 import BackArrow from "../components/BackArrow";
 
 export function AlumnosFormPage() {

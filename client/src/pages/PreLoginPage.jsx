@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/PreLoginPage.css";
 import { Link } from "react-router-dom";
 
 function PreLoginPage() {

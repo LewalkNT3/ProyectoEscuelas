@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../styles/loginpage.css";
 import BackButton from "./BackArrow";
 
 const LoginForm = () => {
