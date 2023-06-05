@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { AlumnosPage } from "./pages/AlumnosPage";
 import { AlumnosFormPage } from "./pages/AlumnosFormPage";
 import { Toaster } from "react-hot-toast";
 import { Homepage } from "./pages/homepage";
 import { ListaDeAlumnosRO } from "./components/ListaDeAlumnosRO";
+import { AlumnosPage } from "./pages/AlumnosPage";
 import InfoCompletaAlumno from "./pages/InfoCompletaAlumno";
 import UserDetail from "./components/UserDetails";
 import UserList from "./components/UserList";
