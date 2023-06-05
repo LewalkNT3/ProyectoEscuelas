@@ -3,7 +3,7 @@ import { AlumnosFormPage } from "./pages/AlumnosFormPage";
 import { Toaster } from "react-hot-toast";
 import { Homepage } from "./pages/homepage";
 import { ListaDeAlumnosRO } from "./components/ListaDeAlumnosRO";
-import { AlumnosPage } from "./pages/AlumnosPage";
+import { AlumnosList } from "./components/AlumnosList";
 import InfoCompletaAlumno from "./pages/InfoCompletaAlumno";
 import UserDetail from "./components/UserDetails";
 import UserList from "./components/UserList";
@@ -12,6 +12,7 @@ import LoginForm from "./components/LoginForm";
 import PreLoginPage from "./pages/PreLoginPage";
 import "./index.css";
 import "./app.css";
+import { AlumnosList } from "./components/AlumnosList";
 
 function App() {
   const isUserLoggedIn = () => {
@@ -81,7 +82,7 @@ function App() {
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (
-                  <AlumnosPage />
+                  <AlumnosList />
                 ) : (
                   redirectToHomepage()
                 )
