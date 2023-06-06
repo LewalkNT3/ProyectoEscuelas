@@ -22,7 +22,7 @@ const LoginForm = () => {
       const { access_token, is_staff } = response.data;
       localStorage.setItem("access_token", access_token);
       localStorage.setItem("is_staff", is_staff);
-      navigate("/");
+      navigate("/homepage");
     } catch (error) {
       console.error(error);
     }
