@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "pe_django_crud/wsgi.py",
+      "src": "pe_django_crud/pe_django_crud/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }
