@@ -24,7 +24,8 @@ const LoginForm = () => {
       localStorage.setItem("is_staff", is_staff);
       navigate("/homepage");
     } catch (error) {
-      console.error(error);
+      // console.error(error);
+      console.log("error");
     }
   };
 

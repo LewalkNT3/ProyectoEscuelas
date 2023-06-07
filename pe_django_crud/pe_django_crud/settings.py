@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-i=d_0$c-z!3n@(u&5!80c+pq_#a+5((s&f$19ycppk=ua3$bjv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app',
+                 'localhost']
 
 
 # Application definition
@@ -177,7 +178,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:5173',
-                        'https://proyecto-escuelas-moreno-os2fjpwtv-lewalknt3.vercel.app'
+                        'https://proyecto-escuelas-moreno-os2fjpwtv-lewalknt3.vercel.app',
                         ]
 
 REST_FRAMEWORK = {
