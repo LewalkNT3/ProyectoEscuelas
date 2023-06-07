@@ -24,6 +24,9 @@ function PreLoginPage() {
             <button className="w-48 h-10 border border-1 border-black outline-none cursor-pointer text-xl transition duration-300 ease bg-transparent hover:bg-custom-green">
               <Link to="/login">Inicia Sesion</Link>
             </button>
+            <button className="w-48 h-10 border border-1 border-black outline-none cursor-pointer text-xl transition duration-300 ease bg-transparent hover:bg-custom-green">
+              <Link to="/homepage">homepage</Link>
+            </button>
           </div>
         </div>
       </div>
