@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllAlumnos } from "../api/alumnos.api";
 import AlumnosCardRO from "./AlumnosCardRO";
+import BackButton from "./BackArrow";
 
 export function ListaDeAlumnosRO() {
   const [alumnos, setAlumnos] = useState([]);
