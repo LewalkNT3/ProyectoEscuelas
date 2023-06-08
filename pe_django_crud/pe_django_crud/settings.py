@@ -129,11 +129,11 @@ SIMPLE_JWT = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NuevaDBProyectoEscuelas',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'ud8kc3ma',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'kAURi9UuUbcIjjO5pNFJ',
+        'HOST': 'containers-us-west-77.railway.app',
+        'PORT': '7655',
     }
 }
 
