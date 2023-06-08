@@ -8,7 +8,9 @@ const UserDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/users/api/users/${id}/`)
+      .get(
+        `https://backend-proyecto-escuelas.onrender.com/users/api/users/${id}/`
+      )
       .then((response) => {
         setUser(response.data);
       })
@@ -19,7 +21,9 @@ const UserDetail = () => {
 
   const handleApprove = () => {
     axios
-      .post(`http://localhost:8000/users/api/users/${id}/approve/`)
+      .post(
+        `https://backend-proyecto-escuelas.onrender.com/users/api/users/${id}/approve/`
+      )
       .then((response) => {
         setUser({ ...user, is_approved: true });
       })
@@ -30,7 +34,9 @@ const UserDetail = () => {
 
   const handleDeny = () => {
     axios
-      .post(`http://localhost:8000/users/api/users/${id}/deny/`)
+      .post(
+        `https://backend-proyecto-escuelas.onrender.com/users/api/users/${id}/deny/`
+      )
       .then((response) => {
         setUser(null);
       })

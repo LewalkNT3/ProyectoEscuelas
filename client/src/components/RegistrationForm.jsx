@@ -33,7 +33,10 @@ const RegistrationForm = () => {
     };
 
     axios
-      .post("http://localhost:8000/users/api/register/", userData)
+      .post(
+        "https://backend-proyecto-escuelas.onrender.com/users/api/register/",
+        userData
+      )
       .then((response) => {
         console.log(response.data);
         toast.success("Registration successful!");

@@ -6,7 +6,7 @@ const UserList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/users/api/users/")
+      .get("https://backend-proyecto-escuelas.onrender.com/users/api/users/")
       .then((response) => {
         setUsers(response.data);
       })

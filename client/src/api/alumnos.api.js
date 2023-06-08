@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const alumnosApi = axios.create({
-  baseURL: "http://localhost:8000/alumnos/ListaDeAlumnos",
+  baseURL:
+    "https://backend-proyecto-escuelas.onrender.com/alumnos/ListaDeAlumnos",
 });
 
 export const getAllAlumnos = () => alumnosApi.get("/");
