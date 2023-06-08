@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import BackButton from "./BackArrow";
 
@@ -22,9 +21,8 @@ const LoginForm = () => {
       const { access_token, is_staff } = response.data;
       localStorage.setItem("access_token", access_token);
       localStorage.setItem("is_staff", is_staff);
-      navigate("/homepage");
+      navigate("/homepage"); // Redirigir al usuario a la página de inicio
     } catch (error) {
-      // console.error(error);
       console.log("error");
     }
   };
