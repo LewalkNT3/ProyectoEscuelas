@@ -59,7 +59,7 @@ export function AlumnosList() {
   }, [filtro, filtroCurso, filtroEscuela, filtroTurno]);
 
   return (
-    <div className="flex flex-row items-start min-h-screen bg-full-bg-color">
+    <div className="flex flex-row place-start justify-center min-h-screen bg-full-bg-color">
       <div className="flex flex-col items-center max-w-screen-sm p-6 bg-white w-full h-full box-border shadow-xl">
         <div className="absolute top-10 left-[10px]">
           <BackButton />
