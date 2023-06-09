@@ -10,8 +10,6 @@ import UserList from "./components/UserList";
 import RegisterPage from "./pages/RegistrarUsuarios";
 import LoginForm from "./components/LoginForm";
 import PreLoginPage from "./pages/PreLoginPage";
-// import "./index.css";
-// import "./app.css";
 
 function App() {
   const isUserLoggedIn = () => {

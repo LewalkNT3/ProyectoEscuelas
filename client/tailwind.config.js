@@ -9,6 +9,7 @@ module.exports = {
         "custom-ornage": "rgb(207 83 59)",
         "custom-violet": "#9585ba",
         "custom-yellow": "#f3d1a4",
+        "full-bg-color": "#d9d9d9",
       },
     },
   },

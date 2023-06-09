@@ -9,7 +9,7 @@ const BackButton = () => {
   };
 
   return (
-    <button onClick={goBack} className="back-button">
+    <button onClick={goBack} className="hover:bg-gray-100 h-7 w-7 rounded-full">
       &#8592;
     </button>
   );

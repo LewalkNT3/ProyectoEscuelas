@@ -59,18 +59,19 @@ export function AlumnosList() {
   }, [filtro, filtroCurso, filtroEscuela, filtroTurno]);
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col items-center max-h-[90%] max-w-[65%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
-        <BackButton />
+    <div className="flex flex-row items-start min-h-screen bg-full-bg-color">
+      <div className="flex flex-col items-center max-w-screen-sm p-6 bg-white w-full h-full box-border shadow-xl">
+        <div className="absolute top-10 left-[10px]">
+          <BackButton />
+        </div>
         <input
-          className="w-[65%] p-3 border border-black mb-5 rounded-full"
+          className="w-[65%] sm:w-full p-3 border border-black mb-5 rounded-full"
           type="text"
           value={filtro}
           onChange={handleFiltroChange}
           placeholder="Filtrar alumnos"
         />
-
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col sm:flex-row gap-5">
           <div className="border border-black p-3 rounded-xl">
             <select value={filtroCurso} onChange={handleFiltroCursoChange}>
               <option value="">Todos los cursos</option>
@@ -116,10 +117,12 @@ export function AlumnosList() {
             </select>
           </div>
         </div>
-
         {alumnos.map((alumno) => (
-          <div className="min-w-full" key={alumno.id}>
-            <AlumnosCard key={alumno.id} alumno={alumno} />
+          <div
+            className="min-w-full sm:w-[50%] md:w-[30%] lg:w-[20%]"
+            key={alumno.id}
+          >
+            <AlumnosCard alumno={alumno} />
           </div>
         ))}
       </div>

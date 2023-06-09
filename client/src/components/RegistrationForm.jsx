@@ -48,9 +48,11 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center flex-col">
-      <div className="w-[480px] h-[500px] p-280 bg-[#f4f4f4] box box-border shadow-2xl flex justify-center items-center flex-col ">
-        <BackButton />
+    <div className="min-h-screen flex justify-center items-center flex-col bg-full-bg-color">
+      <div className="hidden md:flex justify-center items-center flex-col w-[480px] h-[500px] p-280 bg-white box box-border shadow-2xl">
+        <div className="absolute top-[80px] left-[425px]">
+          <BackButton />
+        </div>
         <h2 className="text-4xl pb-10">Registro de cuentas</h2>
         {error && <p>{error}</p>}
         <form onSubmit={handleSubmit}>
@@ -89,6 +91,38 @@ const RegistrationForm = () => {
           <span className="ml-2">Es administrador?</span>
         </label>
       </div>
+      <h2 className="text-4xl pb-10 md:hidden">Registro de cuentas</h2>
+      <form className="md:hidden" onSubmit={handleSubmit}>
+        <div className="relative m-3 w-[310px] pb-3">
+          <input
+            className="w-full h-12 bg-transparent border-b-2 border-black text-lg p-3 outline-none"
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder="Usuario"
+          />
+        </div>
+        <div className="relative m-3 w-[310px] pb-6 ">
+          <input
+            className="w-full h-12 bg-transparent border-b-2 border-black text-lg p-3 outline-none"
+            placeholder="Contrasena"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+        </div>
+        <button
+          className="w-full h-[40px] cursor-pointer mb-3 border border-1 border-black  transition duration-300 ease bg-transparent hover:bg-custom-green"
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+      <label className="checkbox-container md:hidden">
+        <input type="checkbox" checked={isStaff} onChange={handleAdminChange} />
+        <span className="checkmark"></span>
+        <span className="ml-2">Es administrador?</span>
+      </label>
     </div>
   );
 };
