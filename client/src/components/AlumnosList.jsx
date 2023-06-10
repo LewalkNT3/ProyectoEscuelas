@@ -59,18 +59,20 @@ export function AlumnosList() {
   }, [filtro, filtroCurso, filtroEscuela, filtroTurno]);
 
   return (
-    <div className="flex flex-row place-start justify-center min-h-screen bg-full-bg-color">
+    <div className="flex flex-row items-start justify-center min-h-screen bg-full-bg-color">
       <div className="flex flex-col items-center max-w-screen-sm p-6 bg-white w-full h-full box-border shadow-xl">
-        <div className="absolute top-10 left-[10px]">
-          <BackButton />
+        <div className="flex flex-row w-[90%] self-start">
+          <div className="m-3">
+            <BackButton />
+          </div>
+          <input
+            className="w-[65%] sm:w-full p-3 ml-6 border border-black mb-5 rounded-full"
+            type="text"
+            value={filtro}
+            onChange={handleFiltroChange}
+            placeholder="Filtrar alumnos"
+          />
         </div>
-        <input
-          className="w-[65%] sm:w-full p-3 border border-black mb-5 rounded-full"
-          type="text"
-          value={filtro}
-          onChange={handleFiltroChange}
-          placeholder="Filtrar alumnos"
-        />
         <div className="flex flex-col sm:flex-row gap-5">
           <div className="border border-black p-3 rounded-xl">
             <select value={filtroCurso} onChange={handleFiltroCursoChange}>

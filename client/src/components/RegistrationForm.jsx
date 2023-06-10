@@ -49,8 +49,8 @@ const RegistrationForm = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center flex-col bg-full-bg-color">
-      <div className="hidden md:flex justify-center items-center flex-col w-[480px] h-[500px] p-280 bg-white box box-border shadow-2xl">
-        <div className="absolute top-[80px] left-[425px]">
+      <div className="hidden md:flex justify-center items-center flex-col w-[480px] h-[500px] p-280 bg-white box shadow-2xl">
+        <div className="self-start px-7">
           <BackButton />
         </div>
         <h2 className="text-4xl pb-10">Registro de cuentas</h2>

@@ -17,15 +17,15 @@ export function AlumnoInfoCompleta() {
 
   return (
     <>
-      <div className="flex justify-center items-center bg-full-bg-color">
-        <div className="flex flex-col items-center xl:max-h-[90%] xl:max-w-[65%] sm:max-w-[100%] sm:max-h-[100%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
-          <div className="absolute top-32 left-52">
-            <BackButton />
-          </div>
+      <div className="flex justify-center items-centerh-screen h-max bg-full-bg-color">
+        <div className="flex flex-col items-center xl:max-h-max xl:max-w-[65%] sm:max-w-[100%] sm:max-h-[100%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
           {alumno && (
-            <div className="flex flex-col gap-2 p-10 border border-black ">
-              <div className="">
-                <h1 className="text-center font-bold text-3xl mb-5">
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row justify-center items-center">
+                <div className="pb-4">
+                  <BackButton />
+                </div>
+                <h1 className="text-center font-bold text-3xl mb-5 px-3">
                   Informacion completa de {alumno.Fullname}{" "}
                 </h1>
               </div>
@@ -69,25 +69,25 @@ export function AlumnoInfoCompleta() {
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Curso
                 </label>
-                <p className="p-2 w-1/6">{alumno.Curso}</p>
+                <p className="p-2 w-2/6">{alumno.Curso}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Turno
                 </label>
-                <p className="p-2 w-1/6">{alumno.Turno}</p>
+                <p className="p-2 w-2/6">{alumno.Turno}</p>
               </div>
               {alumno.Inclusion && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     Inclusion
                   </label>
-                  <p>{alumno.InclusionTexto}</p>
+                  <p className="p-2 w-2/6">{alumno.InclusionTexto}</p>
                 </div>
               )}
               {alumno.Ausentismo && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     Ausentismo:
                   </label>
                   <p className="p-2 w-1/6">{alumno.AusentismoTexto}</p>
@@ -95,7 +95,7 @@ export function AlumnoInfoCompleta() {
               )}
               {alumno.Conducta && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     Conducta
                   </label>
                   <p className="p-2 w-1/6">{alumno.ConductaTexto}</p>
@@ -103,15 +103,15 @@ export function AlumnoInfoCompleta() {
               )}
               {alumno.DEI && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     DEI
                   </label>
-                  <p className="p-2 w-1/6">DEI {alumno.DEITexto}</p>
+                  <p className="p-2 w-1/6">{alumno.DEITexto}</p>
                 </div>
               )}
               {alumno.Judicial && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     Judicial
                   </label>
                   <p className="p-2 w-1/6">{alumno.JudicialTexto}</p>
@@ -119,16 +119,14 @@ export function AlumnoInfoCompleta() {
               )}
               {alumno.ServicioLocal && (
                 <div className="flex flex-row border border-black">
-                  <label className="border text-center p-2 w-1/6 border-r-black">
+                  <label className="border text-center p-2 w-2/6 border-r-black">
                     Servicio Local
                   </label>
                   <p className="p-2 w-1/6">{alumno.ServicioLocalTexto}</p>
                 </div>
               )}
               <p className="">
-                <label>
-                  La última actualización a este usuario fue el día:
-                </label>
+                La última actualización a este usuario fue el día:
                 {alumno.actualizado}
               </p>
             </div>

@@ -63,14 +63,12 @@ export function AlumnosFormPage() {
 
   return (
     <div className="min-h-screen mt-3 pt-3 mb-3 flex justify-center items-center flex-col">
-      <div className="p-5 sm:p-10 bg-gray-50 box box-border shadow-2xl flex justify-center items-center flex-col border border-1">
-        <div className="absolute top-5 left-5">
-          <BackButton />
-        </div>
-        <div className="titulo-container">
-          <h1 className="text-2xl sm:text-5xl mb-5 sm:mb-10">
-            Registra los alumnos
-          </h1>
+      <div className="p-5 sm:p-10 bg-gray-100 box box-border shadow-2xl flex justify-center items-center flex-col border border-1">
+        <div className="flex flex-row">
+          <div className="m-3">
+            <BackButton />
+          </div>
+          <h1 className="text-2xl sm:text-5xl">Registra los alumnos</h1>
         </div>
         <hr />
         <form className="w-full sm:w-96 mt-5 sm:mt-10" onSubmit={onSubmit}>

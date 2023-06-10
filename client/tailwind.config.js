@@ -4,6 +4,12 @@ module.exports = {
   content: [" ./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      },
       colors: {
         "custom-green": "rgb(79 127 127)",
         "custom-ornage": "rgb(207 83 59)",
