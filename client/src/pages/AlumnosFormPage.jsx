@@ -29,7 +29,7 @@ export function AlumnosFormPage() {
         await createAlumno(data);
         toast.success("Alumno Creado");
       }
-      navigate("/homepage");
+      navigate("/");
     } catch (error) {
       toast.error(
         "Los datos al registrar el alumno son incorrectos, revisa las casillas y reintenta"
@@ -73,7 +73,7 @@ export function AlumnosFormPage() {
           <div className="m-3">
             <BackButton />
           </div>
-          <h1 className="text-2xl sm:text-5xl">Registra los alumnos</h1>
+          <h1 className="text-2xl sm:text-5xl">Registra los estudiantes</h1>
         </div>
         <hr />
         <form className="w-full sm:w-96 mt-5 sm:mt-10" onSubmit={onSubmit}>
@@ -246,11 +246,11 @@ export function AlumnosFormPage() {
           <div className="flex gap-4">
             <input
               type="checkbox"
-              placeholder="Conducta"
+              placeholder="Otros"
               {...register("Conducta", { required: false })}
             ></input>
             <textarea
-              placeholder="ConductaTexto"
+              placeholder="Otros"
               {...register("ConductaTexto", { required: false })}
               className="w-full mb-3 p-3 outline-none"
             ></textarea>
@@ -263,7 +263,7 @@ export function AlumnosFormPage() {
           <button
             onClick={async () => {
               await deleteAlumnos(params.id);
-              navigate("/homepage");
+              navigate("/");
               toast.success("Alumno eliminado");
             }}
             className="flex justify-center items-center w-full h-[40px] mb-3 border border-1 border-red-500 transition duration-200 ease bg-transparent hover:bg-red-500 text-red-500 hover:text-white"

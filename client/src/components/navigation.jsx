@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function Navigation() {
   return (
     <div>
-      <Link to="/homepage">
+      <Link to="/">
         <h1>Proyecto Escuelas</h1>
       </Link>
       {localStorage.getItem("access_token") && (

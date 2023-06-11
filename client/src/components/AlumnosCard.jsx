@@ -7,7 +7,7 @@ export function AlumnosCard({ alumno }) {
     <div
       className="flex justify-center items-center max-h-screen"
       onClick={() => {
-        navigate(`/administrador-de-alumnos/estudiante + alumno.id`);
+        navigate(`/administrador-de-estudiantes/estudiante/${alumno.id}`);
       }}
     >
       <div className="flex flex-col items-start max-h-[300px] max-w-[500px] sm:max-w-[400px] p-5 m-5 bg-[#f4f4f4] w-full h-full box-border shadow-2xl gap-1 border border-1 border-black">
