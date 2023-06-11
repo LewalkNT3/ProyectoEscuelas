@@ -89,7 +89,7 @@ export function AlumnoInfoCompleta() {
                   <label className="border text-center p-2 w-2/6 border-r-black">
                     Ausentismo:
                   </label>
-                  <p className="p-2 w-1/6">{alumno.AusentismoTexto}</p>
+                  <p className="p-2 w-3/6">{alumno.AusentismoTexto}</p>
                 </div>
               )}
               {alumno.Conducta && (
@@ -97,7 +97,7 @@ export function AlumnoInfoCompleta() {
                   <label className="border text-center p-2 w-2/6 border-r-black">
                     Conducta
                   </label>
-                  <p className="p-2 w-1/6">{alumno.ConductaTexto}</p>
+                  <p className="p-2 w-3/6">{alumno.ConductaTexto}</p>
                 </div>
               )}
               {alumno.DEI && (
@@ -105,7 +105,7 @@ export function AlumnoInfoCompleta() {
                   <label className="border text-center p-2 w-2/6 border-r-black">
                     DEI
                   </label>
-                  <p className="p-2 w-1/6">{alumno.DEITexto}</p>
+                  <p className="p-2 w-3/6">{alumno.DEITexto}</p>
                 </div>
               )}
               {alumno.Judicial && (
@@ -113,7 +113,7 @@ export function AlumnoInfoCompleta() {
                   <label className="border text-center p-2 w-2/6 border-r-black">
                     Judicial
                   </label>
-                  <p className="p-2 w-1/6">{alumno.JudicialTexto}</p>
+                  <p className="p-2 w-3/6">{alumno.JudicialTexto}</p>
                 </div>
               )}
               {alumno.ServicioLocal && (
@@ -121,7 +121,9 @@ export function AlumnoInfoCompleta() {
                   <label className="border text-center p-2 w-2/6 border-r-black">
                     Servicio Local
                   </label>
-                  <p className="p-2 w-1/6">{alumno.ServicioLocalTexto}</p>
+                  <p className="p-2 w-3/6 max-w-3/6">
+                    {alumno.ServicioLocalTexto}
+                  </p>
                 </div>
               )}
               <p className="">

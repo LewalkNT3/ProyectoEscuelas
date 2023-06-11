@@ -246,7 +246,7 @@ export function AlumnosFormPage() {
           <div className="flex gap-4">
             <input
               type="checkbox"
-              placeholder="Otros"
+              placeholder="Estudiantes"
               {...register("Conducta", { required: false })}
             ></input>
             <textarea
