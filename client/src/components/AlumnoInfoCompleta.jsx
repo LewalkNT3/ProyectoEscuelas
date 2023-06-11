@@ -32,13 +32,13 @@ export function AlumnoInfoCompleta() {
                 <label className="border p-2 text-center w-2/6 border-r-black">
                   Nombre
                 </label>
-                <h1 className="p-2 w-1/6 ">{alumno.Fullname}</h1>
+                <h1 className="p-2 w-3/6 ">{alumno.Fullname}</h1>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Escuela
                 </label>
-                <p className="p-2 w-1/6">{alumno.Escuela}</p>
+                <p className="p-2 w-3/6">{alumno.Escuela}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
@@ -50,25 +50,25 @@ export function AlumnoInfoCompleta() {
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   DNI
                 </label>
-                <p className="p-2 w-1/6">{alumno.DNI}</p>
+                <p className="p-2 w-3/6">{alumno.DNI}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Legajo
                 </label>
-                <p className="p-2 w-1/6">{alumno.Legajo}</p>
+                <p className="p-2 w-3/6">{alumno.Legajo}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Teléfono
                 </label>
-                <p className="p-2 w-1/6">{alumno.telefono}</p>
+                <p className="p-2 w-3/6">{alumno.telefono}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
                   Curso
                 </label>
-                <p className="p-2 w-2/6">{alumno.Curso}</p>
+                <p className="p-2 w-3/6">{alumno.Curso}</p>
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
