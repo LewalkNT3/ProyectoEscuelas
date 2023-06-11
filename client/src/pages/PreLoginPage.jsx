@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function PreLoginPage() {
   return (
-    <div className="flex justify-center md:justify-start items-center max-h-screen">
-      <div className="hidden md:flex flex-row-reverse items-center max-h-[90%] max-w-[90%] p-14 m-14 bg-white w-full h-full box-border shadow-xl">
+    <div className="p-0 m-0 flex h-screen justify-center items-center bg-full-bg-color overflow-hidden">
+      <div className="hidden md:flex flex-row-reverse items-center max-h-[80%] max-w-[80%] p-20 m-14 bg-white w-full h-full box-border shadow-xl">
         <div className="flex-0 flex-grow-0 flex-shrink-0 flex-basis-1/2 ml-4">
           <img
-            className="w-800 h-auto object-cover aspect-video"
+            className="w-800 h-auto"
             src="/bannerprelogin-removebg-preview (1).png"
             alt="Banner"
           />
@@ -15,7 +15,7 @@ function PreLoginPage() {
         <div className="flex flex-col items-center">
           <h1 className="text-4xl font-bold pb-1">Bienvenido!</h1>
           <div className="w-7/12 mt-2 text-center pb-6 pt-2">
-            <p className="max-w-md mx-auto">
+            <p className="max-w-xl mx-auto">
               loremLorem ipsum dolor sit amet, consectetur adipiscing elit.
               Proin diam ligula, egestas eu turpis commodo, ornare malesuada
               metus. Sed maximus,

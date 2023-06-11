@@ -56,11 +56,11 @@ export function Homepage() {
               <p className="text-sm">Registra Usuarios</p>
             </div>
           </div>
-          <div className="hidden xl:block md:block flex-0 flex-grow-0 flex-shrink-0 flex-basis-1/2 ml-10 pt-24 text-center">
+          <div className="hidden xl:block md:block flex-0 flex-grow-0 flex-shrink-0 flex-basis-1/2 ml-10 pt-16 text-center">
             <div className="text-center text-5xl">
-              <h1>¿Qué quieres hacer?</h1>
+              <h1>¿Qué queres hacer?</h1>
             </div>
-            <div>
+            <div className="">
               <img src="homepage.png" />
             </div>
           </div>

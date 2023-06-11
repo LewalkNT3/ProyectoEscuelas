@@ -25,15 +25,15 @@ function App() {
     return localStorage.getItem("is_staff") === "true";
   };
 
-  const redirectToLogin = () => <Navigate to="/" />;
+  const redirectToLogin = () => <Navigate to="/login" />;
 
-  const redirectToHomepage = () => <Navigate to="/homepage" />;
+  const redirectToHomepage = () => <Navigate to="/" />;
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PreLoginPage />} />
+          <Route path="/bienvenidos" element={<PreLoginPage />} />
           <Route path="/login" element={<LoginForm />} />
           <Route
             path="/administrador-alumnos/alumno/:id"
@@ -49,7 +49,7 @@ function App() {
               )
             }
           />
-          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route
             path="/lista-de-alumnos"
             element={
