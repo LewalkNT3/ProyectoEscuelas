@@ -10,7 +10,6 @@ export function AlumnoInfoCompleta() {
     async function loadAlumno() {
       const res = await getALumnoRO(params.id);
       setAlumno(res.data);
-      console.log(res.data);
     }
     loadAlumno();
   }, [params.id]);
@@ -26,7 +25,7 @@ export function AlumnoInfoCompleta() {
                   <BackButton />
                 </div>
                 <h1 className="text-center font-bold text-3xl mb-5 px-3">
-                  Informacion completa de {alumno.Fullname}{" "}
+                  Información completa de {alumno.Fullname}{" "}
                 </h1>
               </div>
               <div className="flex flex-row border border-black">
@@ -61,7 +60,7 @@ export function AlumnoInfoCompleta() {
               </div>
               <div className="flex flex-row border border-black">
                 <label className="border text-center p-2 w-2/6 border-r-black">
-                  Telefono
+                  Teléfono
                 </label>
                 <p className="p-2 w-1/6">{alumno.telefono}</p>
               </div>
@@ -80,7 +79,7 @@ export function AlumnoInfoCompleta() {
               {alumno.Inclusion && (
                 <div className="flex flex-row border border-black">
                   <label className="border text-center p-2 w-2/6 border-r-black">
-                    Inclusion
+                    Inclusión
                   </label>
                   <p className="p-2 w-2/6">{alumno.InclusionTexto}</p>
                 </div>

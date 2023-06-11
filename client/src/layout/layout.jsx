@@ -1,6 +1,5 @@
-import React from "react";
-import { Navigation } from "../components/navigation";
+import Footer from "./footer";
 
 export default function Layout() {
-  return <Navigation />;
+  return <Footer />;
 }

@@ -22,7 +22,6 @@ export function ListaDeAlumnosRO() {
 
   const handleFiltroEscuelaChange = (event) => {
     const valorFiltroEscuela = event.target.value.toLowerCase();
-    console.log(valorFiltroEscuela);
     setFiltroEscuela(valorFiltroEscuela);
   };
 
@@ -62,7 +61,7 @@ export function ListaDeAlumnosRO() {
     <div className="flex flex-row items-start justify-center min-h-screen bg-full-bg-color">
       <div className="flex flex-col items-center max-w-screen-sm p-6 bg-white w-full h-full box-border shadow-xl">
         <div className="flex flex-row w-[90%] self-start">
-          <div className="mt-2">
+          <div className="m-3">
             <BackButton />
           </div>
           <input

@@ -21,21 +21,26 @@ export function AlumnosFormPage() {
   const params = useParams();
 
   const onSubmit = handleSubmit(async (data) => {
-    if (params.id) {
-      await updateAlumnos(params.id, data);
-      toast.success("Alumno Actualizado");
-    } else {
-      await createAlumno(data);
-      toast.success("Alumno Creado");
+    try {
+      if (params.id) {
+        await updateAlumnos(params.id, data);
+        toast.success("Alumno Actualizado");
+      } else {
+        await createAlumno(data);
+        toast.success("Alumno Creado");
+      }
+      navigate("/homepage");
+    } catch (error) {
+      toast.error(
+        "Los datos al registrar el alumno son incorrectos, revisa las casillas y reintenta"
+      );
     }
-    navigate("/homepage");
   });
 
   useEffect(() => {
     async function loadAlumno() {
       if (params.id) {
         const res = await getAlumno(params.id);
-        console.log(res);
         setValue("Escuela", res.data.Escuela);
         setValue("Fullname", res.data.Fullname);
         setValue("FechaDeNacimiento", res.data.FechaDeNacimiento);

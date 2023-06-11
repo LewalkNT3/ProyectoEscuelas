@@ -22,7 +22,6 @@ export function AlumnosList() {
 
   const handleFiltroEscuelaChange = (event) => {
     const valorFiltroEscuela = event.target.value.toLowerCase();
-    console.log(valorFiltroEscuela);
     setFiltroEscuela(valorFiltroEscuela);
   };
 

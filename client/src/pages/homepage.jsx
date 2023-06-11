@@ -13,16 +13,16 @@ export function Homepage() {
   }, [shouldReload]);
 
   const handleClickListaAlumnosDeAlumnos = () => {
-    navigate(`/lista-de-alumnos`);
+    navigate(`/lista-de-estudiantes`);
   };
   const handleClickListaCrearAlumnos = () => {
-    navigate(`/registrar-alumno`);
+    navigate(`/registrar-estudiante`);
   };
   const handleClickRegistrarUsuario = () => {
     navigate(`/registrar-usuarios`);
   };
   const handleClickAdminDeAlumnos = () => {
-    navigate(`/administrador-alumnos`);
+    navigate(`/administrador-de-estudiantes`);
   };
 
   return (

@@ -11,6 +11,7 @@ import RegisterPage from "./pages/RegistrarUsuarios";
 import LoginForm from "./components/LoginForm";
 import PreLoginPage from "./pages/PreLoginPage";
 import { useEffect } from "react";
+import Layout from "./layout/layout";
 
 function App() {
   useEffect(() => {
@@ -36,7 +37,7 @@ function App() {
           <Route path="/bienvenidos" element={<PreLoginPage />} />
           <Route path="/login" element={<LoginForm />} />
           <Route
-            path="/administrador-alumnos/alumno/:id"
+            path="/administrador-de-estudiantes/estudiante/:id"
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (
@@ -51,19 +52,19 @@ function App() {
           />
           <Route path="/" element={<Homepage />} />
           <Route
-            path="/lista-de-alumnos"
+            path="/lista-de-estudiantes"
             element={
               isUserLoggedIn() ? <ListaDeAlumnosRO /> : redirectToLogin()
             }
           />
           <Route
-            path="/lista-de-alumnos/alumno/:id"
+            path="/lista-de-estudiantes/estudiante/:id"
             element={
               isUserLoggedIn() ? <InfoCompletaAlumno /> : redirectToLogin()
             }
           />
           <Route
-            path="/registrar-alumno"
+            path="/registrar-estudiante"
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (
@@ -77,7 +78,7 @@ function App() {
             }
           />
           <Route
-            path="/administrador-alumnos"
+            path="/administrador-de-estudiantes"
             element={
               isUserLoggedIn() ? (
                 isUserStaff() ? (
@@ -137,6 +138,7 @@ function App() {
           />
         </Routes>
         <Toaster />
+        <Layout />
       </BrowserRouter>
     </>
   );

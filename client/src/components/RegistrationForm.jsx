@@ -38,7 +38,6 @@ const RegistrationForm = () => {
         userData
       )
       .then((response) => {
-        console.log(response.data);
         toast.success("Registration successful!");
         navigate("/administrador-alumnos");
       })
