@@ -10,8 +10,13 @@ import UserList from "./components/UserList";
 import RegisterPage from "./pages/RegistrarUsuarios";
 import LoginForm from "./components/LoginForm";
 import PreLoginPage from "./pages/PreLoginPage";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Proyecto Escuelas";
+  }, []);
+
   const isUserLoggedIn = () => {
     return localStorage.getItem("access_token") !== null;
   };
@@ -44,10 +49,7 @@ function App() {
               )
             }
           />
-          <Route
-            path="/homepage"
-            element={isUserLoggedIn() ? <Homepage /> : redirectToLogin()}
-          />
+          <Route path="/homepage" element={<Homepage />} />
           <Route
             path="/lista-de-alumnos"
             element={

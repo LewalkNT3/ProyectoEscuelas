@@ -21,7 +21,8 @@ const LoginForm = () => {
       const { access_token, is_staff } = response.data;
       localStorage.setItem("access_token", access_token);
       localStorage.setItem("is_staff", is_staff);
-      navigate("/homepage");
+      navigate(`/homepage`);
+      window.location.reload();
     } catch (error) {
       console.log("error");
     }
@@ -30,7 +31,7 @@ const LoginForm = () => {
   return (
     <div className="min-h-screen flex justify-center items-center flex-col">
       <div className="hidden md:flex w-[480px] h-[500px] p-280 bg-[#f4f4f4] box box-border shadow-2xl justify-center items-center flex-col">
-        <div className="absolute top-20 left-[425px]">
+        <div className="self-start px-7">
           <BackButton />
         </div>
         <h2 className="text-4xl pb-10">Inicia Sesion!</h2>

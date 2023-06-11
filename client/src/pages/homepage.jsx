@@ -1,8 +1,16 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export function Homepage() {
   const navigate = useNavigate();
+  const [shouldReload, setShouldReload] = useState(false);
+
+  useEffect(() => {
+    if (shouldReload) {
+      setShouldReload(true);
+      window.location.reload();
+    }
+  }, [shouldReload]);
 
   const handleClickListaAlumnosDeAlumnos = () => {
     navigate(`/lista-de-alumnos`);
